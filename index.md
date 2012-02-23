@@ -8,11 +8,11 @@ Mein Name ist Frodo und ich möchte hier mein digitales Tagebuch schreiben.
 Dazu verwende ich natürlich nur cooles Hackerzeug. Neugierig?
 
 Ok, ich schreibe diesen blog mit folgenden Tools: 
-* Meine Dateien editiere ich mit dem coolen vim
-* Das legendäre git sorgt für die Ordnung ;-)
-* Dank github kann ich diesen Blog hier ganz leicht mit einem git push
+- Meine Dateien editiere ich mit dem coolen vim
+- Das legendäre git sorgt für die Ordnung ;-)
+- Dank github kann ich diesen Blog hier ganz leicht mit einem git push
   veröffentlichen.
-* "And last but not least" benutze ich das geniale Jekyll für das Parsen des
+- "And last but not least" benutze ich das geniale Jekyll für das Parsen des
   Quellcodes.
 
 
