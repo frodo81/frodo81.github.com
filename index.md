@@ -1,8 +1,10 @@
 ---
 layout: page
-title: Hello World!
+title: Hello on my Blog!
 ---
 {% include JB/setup %}
+
+Frodo's blog!
 
 Read [Jekyll Quick Start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
 
