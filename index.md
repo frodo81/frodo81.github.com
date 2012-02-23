@@ -14,8 +14,10 @@ Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllb
 
 In `_config.yml` remember to specify your own data:
     
-    title : Frodo's Private Blog
-    
+title : Frodo's Private Blog
+
+	etest
+	    
     author :
       name : Frodo
       email : frodo@bj-wunder.de
