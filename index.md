@@ -6,6 +6,12 @@ title: Hello on my Blog!
 
 Frodo's blog!
 
+This blog has been writen in vim and has been uploaded by git. In the 
+background this github and jekyll are working. 
+
+---
+
+## Here standard stuff from Jekyll
 Read [Jekyll Quick Start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
 
 Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllbootstrap.com)
