@@ -3,6 +3,7 @@ layout: page
 title: Frodo's Welt
 ---
 {% include JB/setup %}
+
 Mein Name ist Frodo und ich möchte hier mein digitales Tagebuch schreiben.
 Dazu verwende ich natürlich nur cooles Hackerzeug. Neugierig?
 
