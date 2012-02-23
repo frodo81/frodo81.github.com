@@ -1,8 +1,10 @@
-# Jekyll-Bootstrap
+# Frodo's Private Blog
 
-The quickest way to start and publish your Jekyll powered blog. 100% compatible with GitHub pages
+Hello on my private blog. Here you will find only useless stuff ;-) 
 
-## Usage
+You also find information about me on [bj-wunder.de]{http://www.bj-wunder.de}
+
+## Jekyll is really cool
 
 For all usage and documentation please see: <http://jekyllbootstrap.com>
 
