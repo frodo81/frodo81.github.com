@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Frodo's Welt
-
+---
+{% include JB/setup %}
 Mein Name ist Frodo und ich möchte hier mein digitales Tagebuch schreiben.
 Dazu verwende ich natürlich nur cooles Hackerzeug. Neugierig?
 
@@ -12,9 +13,6 @@ Ok, ich schreibe diesen blog mit folgenden Tools:
   veröffentlichen.
 * "And last but not least" benutze ich das geniale Jekyll für das Parsen des
   Quellcodes.
-
----
-{% include JB/setup %}
 
 
 ## Some html testing
