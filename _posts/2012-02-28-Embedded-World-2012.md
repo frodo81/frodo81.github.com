@@ -22,7 +22,6 @@ Aufgaben sind:
 * Timer, der den Grundtakt für die Tasks angibt
 
 D. Kalinsky hat die Echzeit ähnlich wie ich definiert im Post 
-{% 2012-02-27-Real-Time-Operation-Systems %}. 
 
 TODO Zitat
 
