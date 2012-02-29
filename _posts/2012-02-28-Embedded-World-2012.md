@@ -22,7 +22,7 @@ Aufgaben sind:
 * Timer, der den Grundtakt für die Tasks angibt
 
 D. Kalinsky hat die Echzeit ähnlich wie ich definiert im Post 
-[Real Time Operation System]{% http://frodo81.github.com/lessons/2012/02/28/Embedded-World-2012/ %}. 
+[Real Time Operation System](http://frodo81.github.com/lessons/2012/02/28/Embedded-World-2012). 
 TODO Zitat
 
 
