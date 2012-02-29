@@ -1,7 +1,7 @@
 ---
 layout: post
 category : lessons
-tags : [embedded world 2012, realtime, tutorial]
+tags : [embeddedworld, realtime, tutorial]
 ---
 {% include JB/setup %}
 
