@@ -11,9 +11,10 @@ Diese Woche findet zum 10 mal die Embedded World statt. Natürlich bin ich wiede
 mit dabei. Ich besuche den Kurs "Introduction to Real Time Operation Systems" 
 von David Kalinsky. 
 
-Hier möchte ich eine kleine Zusammenfassung des Kursinhaltes geben: 
+Hier poste ich eine kleine Zusammenfassung des Kursinhaltes: 
 Zu Beginn haben wir über die Aufgaben eines RTOS gesprochen. Die wichtigsten 
 Aufgaben sind: 
+
 * Die absolut wichtigste Aufgabe ist das Taskmanagement. Wenn man dieses nicht 
    benötigt, dann braucht man auch kein OS!
 * Dynamische Speicherreservierung, malloc, free und so Zeug
@@ -23,9 +24,12 @@ Aufgaben sind:
 
 ## Task Schedulers
 Der wichtigste Part innerhalb des Taskmanagement ist der Task Scheduler. 
+Die Aufgabe des Schedulers ist die Berechnung des nächsten auszuführenden
+Tasks. D.h. Welchem Task wird als nächstes Prozessorzeit zugewiesen. 
 
 Dabei gibt es eine Reihe unterschiedlicher Algorithmen nach denen die Tasks 
 Rechenzeit zugewiesen bekommen: 
+
 * Endless Loop
 * Basic Cyclic Executive
 * Time-Driven Cyclic Executive
@@ -44,15 +48,18 @@ Ein Task hat dabei einige Eigenschaften. So besitzt jeder Task eine eindeutige
 ID, Priorität, Type, Stack, Laufzeit, Deadline, Debuginformationen, ... 
 
 Es gibt verschiedene Kategorien:
+
 * Software-triggerd Tasks
 * Background Task(s)
 * Interrupt-handling Tasks
 * Periodic Tasks
 * Phantom Tasks
 
-Jeder Task hat durchläuft einige Zustände. Dies kann man gut mit einem 
-Zustandsautomaten (Stateflow) abbilden. Es gibt verschieden Arten Tasks 
-sich eine Task vorzustellen. Die einfachste Art besteht aus 3 Zuständen: 
+Jeder Task besitzt verschiedene Zustände während er ausgeführt wird. 
+Dies kann mit einem Zustandsautomaten (Stateflow) abgebildet werden. 
+Es gibt verschieden Möglichkeiten die Zustände eins Tasks 
+einzuteilen. Die einfachste Art besteht aus 3 Zuständen: 
+
 * Ready: Der Task ist für bereit ausgeführt zu werden. Er hat alle notwendigen
 	 Resourcen für die Ausführung für sich reserviert.
 * Running: Der Task erhält den Prozessor und wird darauf ausgeführt. 
@@ -60,13 +67,38 @@ sich eine Task vorzustellen. Die einfachste Art besteht aus 3 Zuständen:
 	   priorisierten Task verdrängt. 
 
 ## Task Kommuniktaion / Synchronisation
-Damit Tasks miteinander Komunizieren können sind folgende Verfahren besprochen 
-worden: 
+In einem System werden die Aufgaben in möglichst kleine Tasks aufgeteilt die 
+gut durch einen Programmierer abgearbeitet werden können. Durch diese Konstruktion des RTOS, muss jeder Task mit anderen Tasks kommunizieren können um da er ja 
+nur eine bestimmte Aufgabe des Gesamtsystems lösen kann. Diese Ergebnis muss er an andere Tasks weitergeben. 
+
+In einem Real Time Operation System gibt es grundlegend Elemente um eine 
+sog. Intertaskkomunikation zu ermöglichen. D.h. einen Informationsaustausch
+zwischen zwei oder mehreren Tasks innerhalb eines Systems.
+
+Wir haben dabei die folgenden Verfahren besprochen: 
+
 * "Indirect" Message Passing
 * "Direct" Message Passing
 * Semaphoren
 * Resource Monitor Tasks
 * Mutex
+
+### Indirect Message Passing
+Bei diesem Verfahren wird die Kommunikation über eine Message an einen anderen Task gesendet. Dabei erstellt der Sender eine Nachricht und sendet diese an einen Buffer, z.B. einen FIFO (FirstIn-FirstOut). Das RTOS erstellt bei der Systeminitialisierung eine entsprechende Warteschlange für alle Nachrichten und sorgt dafür das bei gleichzeitigem Senden von mehreren Task keine Fehler entstehen. 
+
+Äquivalentes geschied beim Empfänger Task. Der Scheduler aktiviert den entsprechenden Task wenn eine Nachricht für diesen vorliegt. Dieser liest wieder aus dem Buffer und erhält somit die benötigten Informationen. 
+
+Ein großer Nachteil dieses Verfahrens ist es das die Nachrichten je nach System mindestens zwei mal Kopiert werden müssen. Dies scheint bei kleinen Nachrichten noch akzeptabel ist jedoch bei großen Nachrichten, wie z.B. bei Ethernet Packeten, sehr Speicheraufwändig und gerade in RTOS unerwünscht. 
+
+### Direct Message Passing
+Um dieses Problem zu beseitigen übergibt man dem Buffer nicht den Dateninhalt, 
+sondern nur einen Zeiger. Dies sorgt dafür das nur der Zeiger mehrmals kopiert wird. Diese Art der Intertaskkomunikation nennt man auch direktes Nachrichenweiterreichen (engl. Direct Message Passing). 
+
+### Semaphoren
+Ein weiteres Verfahren sind sog. Semaphoren. Durch diese wird eine gemeinsame
+Resource gesperrt. Es wird aber keine Nachricht ausgetauscht. Ein Semaphore 
+kann z.B. eingesetzt werden wenn mehrere Tasks auf eine gemeinsame Resource
+zugreifen wollen. So z.B. auf den CAN-Controller oder einen gemeinsamen Speicherbereich für den Datenaustausch. 
 
 ## Echtzeit
 D. Kalinsky hat die Echzeit ähnlich wie ich definiert im Post 
