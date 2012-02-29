@@ -14,15 +14,15 @@ von David Kalinsky.
 Hier möchte ich eine kleine Zusammenfassung des Kursinhaltes geben: 
 Zu Beginn haben wir über die Aufgaben eines RTOS gesprochen. Die wichtigsten 
 Aufgaben sind: 
-- Die absolut wichtigste Aufgabe ist das Taskmanagement. Wenn man dieses nicht 
+* Die absolut wichtigste Aufgabe ist das Taskmanagement. Wenn man dieses nicht 
    benötigt, dann braucht man auch kein OS!
-- Dynamische Speicherreservierung, malloc, free und so Zeug
+* Dynamische Speicherreservierung, malloc, free und so Zeug
 * Ein- und Ausgabeschnittstellten (I/O-Interfaces)
 * Intertaskkomunikation, Synchronisation
 * Timer, der den Grundtakt für die Tasks angibt
 
 D. Kalinsky hat die Echzeit ähnlich wie ich definiert im Post 
-
+[Real Time Operation System]{% 2012-02-27-Real-Time-Operation-Systems %}. 
 TODO Zitat
 
 
