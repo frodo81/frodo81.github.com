@@ -23,4 +23,3 @@ Aufgrund der vielen neuen Befehle und des völlig neuartigen Bedienkonzeptes ist
 ### Vi bzw. Vim auf jedem Unix/Linux System verfügbar
 Einer der beiden Editoren ist auf jedem unixoiden System verfügbar. Auf vielen Serversystemen gibt es häufig nur wenige Editoren vorinstalliert. Vi bzw. Vim ist in der Regel auf all diesen Systemen vorhanden.
 
-
