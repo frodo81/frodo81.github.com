@@ -14,7 +14,7 @@ Heute möchte ich ein wenig über den legendären Vim Editor berichten.
 Damit man einen ersten Eindruck von den Vorteilen von Vim bekommt, kann man sich folende Videos auf YouTube ansehen:
 
 - [Vi - Vim Tutorial. Howto video for the amazing vim editor.](http://www.youtube.com/watch?v=71YTkxUNwmg)
-- http://www.youtube.com/watch?v=_galFWwSDt0&feature=related 
+- [Top Vim Plugins](http://www.youtube.com/watch?v=_galFWwSDt0&feature=related)
 
 ### Das Bedienkonzept
 Das Bedienkonzept von Vim ist rein auf die Tastatur ausgelegt. Es soll ein bestmöglicher Schreibfluss erreicht werden. Es soll vermieden werden komplizierte Tastaturverränkungen für die Befehlseingabe durchzuführen. Die 10 Finger werden bei der Bedienung von Vim so eingesetzt, dass der natürliche Schreibfluss kaum unterbrochen wird. Durch das Konzept von Vim können mit viel Übung extreme Bearbeitungsgeschwindigkeiten von Dateien erreicht werden. 
